@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--===== HERO AREA STARTS =======-->
+{% include "components/hero.html" with title="Blog Post Details" %}
+<!--===== HERO AREA ENDS =======-->
+
+<!--===== BLOG AREA STARTS =======-->
+<div class="blog-inner-section sp1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        {% include "components/sidebar_blog.html" %}
+      </div>
+      <div class="col-lg-8">
+        <div class="space40 d-lg-none d-block"></div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="blog-post-details-area heading1">
+              <div class="img1">
+                <img src="/static/img/all-images/blog/blog-img20.png" alt="housebox">
+              </div>
+              <div class="space32"></div>
+              <ul class="list-author">
+                <li><a href="#">#BestTechSolution</a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                      fill="none">
+                      <path
+                        d="M7.08317 12.8894V18.3327H8.9165V12.8894C12.5339 13.3405 15.3332 16.4264 15.3332 20.166H0.666504C0.666504 16.4264 3.46572 13.3405 7.08317 12.8894ZM7.99984 11.916C4.96109 11.916 2.49984 9.45477 2.49984 6.41602C2.49984 3.37727 4.96109 0.916016 7.99984 0.916016C11.0386 0.916016 13.4998 3.37727 13.4998 6.41602C13.4998 9.45477 11.0386 11.916 7.99984 11.916Z"
+                        fill="#030E0F" />
+                    </svg> By Alex Roy <span> | </span></a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                      fill="none">
+                      <path
+                        d="M1.6665 9.16732H18.3332V16.6673C18.3332 17.1276 17.9601 17.5007 17.4998 17.5007H2.49984C2.0396 17.5007 1.6665 17.1276 1.6665 16.6673V9.16732ZM14.1665 2.50065H17.4998C17.9601 2.50065 18.3332 2.87375 18.3332 3.33398V7.50065H1.6665V3.33398C1.6665 2.87375 2.0396 2.50065 2.49984 2.50065H5.83317V0.833984H7.49984V2.50065H12.4998V0.833984H14.1665V2.50065Z"
+                        fill="#030E0F" />
+                    </svg> 8 December 2024</a></li>
+              </ul>
+              <div class="space20"></div>
+              <h2>How Choose the Perfect Home Neighborhood For Your Family</h2>
+              <div class="space18"></div>
+              <p>Our blog is your trusted companion for navigating the world of real estate and best home living. From
+                expert market insights an investment strategies to creative home design tips, we provide everything you
+                need to make confident informed decisions.</p>
+              <div class="space16"></div>
+              <p>Whether you're buying your first property, upgrading your space, or exploring the an latest trends, our
+                article are designed to inspire and guide, discover practical advice.</p>
+              <div class="space30"></div>
+              <div class="row">
+                <div class="col-lg-6 col-md-6">
+                  <div class="space30"></div>
+                  <div class="img1">
+                    <img src="/static/img/all-images/blog/blog-img16.png" alt="housebox">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="space30"></div>
+                  <div class="img1">
+                    <img src="/static/img/all-images/blog/blog-img14.png" alt="housebox">
+                  </div>
+                </div>
+              </div>
+              <div class="space28"></div>
+              <h3>Finding Your Family's Dream Neighborhood</h3>
+              <div class="space18"></div>
+              <p>Finding the perfect neighborhood for your family is about more than just a beautiful home—it’s about
+                the quality of life that surrounds it. The right neighborhood offers the ideal mix of safety,
+                convenience, and amenities that suit your family’s needs.</p>
+              <div class="row">
+                <div class="space20"></div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="list-area">
+                    <ul>
+                      <li><img src="/static/img/icons/check1.svg" alt="housebox"> Access To Amenities</li>
+                      <li><img src="/static/img/icons/check1.svg" alt="housebox"> Healthcare Services</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="list-area">
+                    <ul>
+                      <li><img src="/static/img/icons/check1.svg" alt="housebox"> Transportation A Commute</li>
+                      <li><img src="/static/img/icons/check1.svg" alt="housebox"> Child-Friendly Environment</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="list-area">
+                    <ul>
+                      <li><img src="/static/img/icons/check1.svg" alt="housebox"> A Pet-Friendly Areas</li>
+                      <li><img src="/static/img/icons/check1.svg" alt="housebox"> Climate and Weather</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="space60"></div>
+              <div class="vide-images">
+                <div class="img1">
+                  <img src="/static/img/all-images/blog/blog-img21.png" alt="housebox">
+                </div>
+                <a href="https://www.youtube.com/watch?v=Y8XpQpW5OVY" class="popup-youtube"><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M6 20.1957V3.80421C6 3.01878 6.86395 2.53993 7.53 2.95621L20.6432 11.152C21.2699 11.5436 21.2699 12.4563 20.6432 12.848L7.53 21.0437C6.86395 21.46 6 20.9812 6 20.1957Z">
+                    </path>
+                  </svg></a>
+              </div>
+              <div class="space28"></div>
+              <h3>What Look for in Community Before You Buy</h3>
+              <div class="space18"></div>
+              <p>Finding your dream home is an exciting milestone, but it’s equally important the find the right
+                location. Start by evaluating the neighborhood’s safety, schools, and home community amenities. A great
+                location means access to essential services grocery.</p>
+              <div class="space32"></div>
+              <div class="tags-social">
+                <div class="tags">
+                  <ul>
+                    <li>Tags:</li>
+                    <li><a href="#">#RealEstateTips</a></li>
+                    <li><a href="#" class="m-0">#DreamHome</a></li>
+                  </ul>
+                </div>
+                <div class="social">
+                  <ul>
+                    <li>Social:</li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#" class="m-0"><i class="fa-brands fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space60"></div>
+              <h3>Comments (2)</h3>
+              <div class="space30"></div>
+              <div class="comments-boxarea">
+                <div class="comments-boxes">
+                  <div class="comments-auhtor-box">
+                    <div class="img3">
+                      <img src="/static/img/all-images/blog/blog-img17.png" alt="housebox">
+                    </div>
+                    <div class="content">
+                      <a href="#" class="date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                          fill="currentColor">
+                          <path
+                            d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM8 13V15H6V13H8ZM13 13V15H11V13H13ZM18 13V15H16V13H18ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z">
+                          </path>
+                        </svg> 8 December 2024</a>
+                      <a href="team.html" class="name">Alex Robertson</a>
+                    </div>
+                  </div>
+                  <a href="#" class="reply"><i class="fa-solid fa-reply"></i> Reply</a>
+                </div>
+                <div class="space16"></div>
+                <p>Thank you for exploring our properties! We value your feedback questions about our listings. Whether
+                  you're interested in scheduling a tour, learning more about our locations, or discovering the
+                  amenities we offer, this is the.</p>
+              </div>
+              <div class="space30"></div>
+              <div class="comments-boxarea box2">
+                <div class="comments-boxes">
+                  <div class="comments-auhtor-box">
+                    <div class="img3">
+                      <img src="/static/img/all-images/blog/blog-img18.png" alt="housebox">
+                    </div>
+                    <div class="content">
+                      <a href="#" class="date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                          fill="currentColor">
+                          <path
+                            d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM8 13V15H6V13H8ZM13 13V15H11V13H13ZM18 13V15H16V13H18ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z">
+                          </path>
+                        </svg> 12 May 2024</a>
+                      <a href="team.html" class="name">Theo Hernandez</a>
+                    </div>
+                  </div>
+                  <a href="#" class="reply"><i class="fa-solid fa-reply"></i> Reply</a>
+                </div>
+                <div class="space16"></div>
+                <p>Thank you so much for your interest and thoughtful comment! We’re the thrilled to hear you’re
+                  considering our properties and would love to best assist you further. If you’re interested in a
+                  specific listing, we’d be happy.</p>
+              </div>
+              <div class="space60"></div>
+              <h3>Leave A Reply Now</h3>
+              <div class="space32"></div>
+              <div class="contact-boxarea">
+                <h3>Send Us A Message</h3>
+                <div class="space8"></div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="text" placeholder="Your Name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="email" placeholder="Email Address">
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="input-area">
+                      <textarea placeholder="Your Message"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="space4"></div>
+                    <div class="input-area">
+                      <button type="submit" class="theme-btn1">Find Your Dream Home <span class="arrow1"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            fill="currentColor">
+                            <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                          </svg></span><span class="arrow2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            width="24" height="24" fill="currentColor">
+                            <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                          </svg></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-bottom-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 m-auto">
+        <div class="heading1 text-center space-margin60">
+          <h2>Read More Recent Blogs</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-single-boxarea">
+          <div class="img1 image-anime">
+            <img src="/static/img/all-images/blog/blog-img12.png" alt="housebox">
+          </div>
+          <div class="content-area">
+            <ul>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                    fill="none">
+                    <path
+                      d="M1.6665 9.16732H18.3332V16.6673C18.3332 17.1276 17.9601 17.5007 17.4998 17.5007H2.49984C2.0396 17.5007 1.6665 17.1276 1.6665 16.6673V9.16732ZM14.1665 2.50065H17.4998C17.9601 2.50065 18.3332 2.87375 18.3332 3.33398V7.50065H1.6665V3.33398C1.6665 2.87375 2.0396 2.50065 2.49984 2.50065H5.83317V0.833984H7.49984V2.50065H12.4998V0.833984H14.1665V2.50065Z"
+                      fill="#030E0F" />
+                  </svg> 11 December 2024</a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                    fill="none">
+                    <path
+                      d="M7.08317 12.8894V18.3327H8.9165V12.8894C12.5339 13.3405 15.3332 16.4264 15.3332 20.166H0.666504C0.666504 16.4264 3.46572 13.3405 7.08317 12.8894ZM7.99984 11.916C4.96109 11.916 2.49984 9.45477 2.49984 6.41602C2.49984 3.37727 4.96109 0.916016 7.99984 0.916016C11.0386 0.916016 13.4998 3.37727 13.4998 6.41602C13.4998 9.45477 11.0386 11.916 7.99984 11.916Z"
+                      fill="#030E0F" />
+                  </svg> By Alex Roy</a></li>
+            </ul>
+            <div class="space14"></div>
+            <a href="#" class="head">Discover the Latest Trends Real Estate An Home Living Insights</a>
+            <div class="space20"></div>
+            <a href="#" class="readmore">learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M13.0508 12.361L7.39395 18.0179L5.97974 16.6037L11.6366 10.9468L6.68684 5.99707H18.0006V17.3108L13.0508 12.361Z">
+                </path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-single-boxarea">
+          <div class="img1 image-anime">
+            <img src="/static/img/all-images/blog/blog-img13.png" alt="housebox">
+          </div>
+          <div class="content-area">
+            <ul>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                    fill="none">
+                    <path
+                      d="M1.6665 9.16732H18.3332V16.6673C18.3332 17.1276 17.9601 17.5007 17.4998 17.5007H2.49984C2.0396 17.5007 1.6665 17.1276 1.6665 16.6673V9.16732ZM14.1665 2.50065H17.4998C17.9601 2.50065 18.3332 2.87375 18.3332 3.33398V7.50065H1.6665V3.33398C1.6665 2.87375 2.0396 2.50065 2.49984 2.50065H5.83317V0.833984H7.49984V2.50065H12.4998V0.833984H14.1665V2.50065Z"
+                      fill="#030E0F" />
+                  </svg> 12 December 2024</a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                    fill="none">
+                    <path
+                      d="M7.08317 12.8894V18.3327H8.9165V12.8894C12.5339 13.3405 15.3332 16.4264 15.3332 20.166H0.666504C0.666504 16.4264 3.46572 13.3405 7.08317 12.8894ZM7.99984 11.916C4.96109 11.916 2.49984 9.45477 2.49984 6.41602C2.49984 3.37727 4.96109 0.916016 7.99984 0.916016C11.0386 0.916016 13.4998 3.37727 13.4998 6.41602C13.4998 9.45477 11.0386 11.916 7.99984 11.916Z"
+                      fill="#030E0F" />
+                  </svg> By Alex Roy</a></li>
+            </ul>
+            <div class="space14"></div>
+            <a href="#" class="head">Explore Property News Lifestyle Tips to Inspire Your Next Move</a>
+            <div class="space20"></div>
+            <a href="#" class="readmore">learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M13.0508 12.361L7.39395 18.0179L5.97974 16.6037L11.6366 10.9468L6.68684 5.99707H18.0006V17.3108L13.0508 12.361Z">
+                </path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-single-boxarea">
+          <div class="img1 image-anime">
+            <img src="/static/img/all-images/blog/blog-img14.png" alt="housebox">
+          </div>
+          <div class="content-area">
+            <ul>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                    fill="none">
+                    <path
+                      d="M1.6665 9.16732H18.3332V16.6673C18.3332 17.1276 17.9601 17.5007 17.4998 17.5007H2.49984C2.0396 17.5007 1.6665 17.1276 1.6665 16.6673V9.16732ZM14.1665 2.50065H17.4998C17.9601 2.50065 18.3332 2.87375 18.3332 3.33398V7.50065H1.6665V3.33398C1.6665 2.87375 2.0396 2.50065 2.49984 2.50065H5.83317V0.833984H7.49984V2.50065H12.4998V0.833984H14.1665V2.50065Z"
+                      fill="#030E0F" />
+                  </svg> 13 December 2024</a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                    fill="none">
+                    <path
+                      d="M7.08317 12.8894V18.3327H8.9165V12.8894C12.5339 13.3405 15.3332 16.4264 15.3332 20.166H0.666504C0.666504 16.4264 3.46572 13.3405 7.08317 12.8894ZM7.99984 11.916C4.96109 11.916 2.49984 9.45477 2.49984 6.41602C2.49984 3.37727 4.96109 0.916016 7.99984 0.916016C11.0386 0.916016 13.4998 3.37727 13.4998 6.41602C13.4998 9.45477 11.0386 11.916 7.99984 11.916Z"
+                      fill="#030E0F" />
+                  </svg> By Alex Roy</a></li>
+            </ul>
+            <div class="space14"></div>
+            <a href="#" class="head">From Buying Guides The Market Trend-Your Real Estate Question </a>
+            <div class="space20"></div>
+            <a href="#" class="readmore">learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M13.0508 12.361L7.39395 18.0179L5.97974 16.6037L11.6366 10.9468L6.68684 5.99707H18.0006V17.3108L13.0508 12.361Z">
+                </path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== BLOG AREA ENDS =======-->
+
+<!--===== CTA AREA STARTS =======-->
+{% include "components/cta.html" %}
+<!--===== CTA AREA ENDS =======-->
+
+
+{% endblock %}

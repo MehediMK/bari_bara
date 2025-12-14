@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <!--===== HERO AREA STARTS =======-->
+  {% include "components/hero.html" with title="My Profile" %}
+  <!--===== HERO AREA ENDS =======-->
+
+  <!--===== DASHBOARD AREA STARTS =======-->
+  <div class="profile-section-area sp1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="heading1">
+            <h1>Update Profile</h1>
+            <div class="space32"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="account-details-boxarea">
+            <h2>Account Setting</h2>
+            <div class="space32"></div>
+            <h4>Settings</h4>
+            <div class="space32"></div>
+            <div class="accout-box">
+              <h3>Agent Account</h3>
+              <div class="space20"></div>
+              <p class="pera">Your current account type is set to agent, if you want to remove your agent account, and return to normal account! Click Button</p>
+              <div class="space20"></div>
+              <div class="btn-area1">
+                <a href="index.html" class="theme-btn1">Remove Agent Account <span class="arrow1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                      <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                    </svg></span><span class="arrow2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                      <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                    </svg></span></a>
+              </div>
+            </div>
+            <div class="space32"></div>
+            <h4>User Avatar</h4>
+            <div class="space24"></div>
+            <div class="box-agent-avt">
+              <div class="avatar">
+                <img src="/static/img/all-images/others/profile1.png" alt="avatar" loading="lazy" width="128" height="128">
+              </div>
+              <div class="content uploadfile">
+                <p>Upload a new avatar</p>
+                <div class="space16"></div>
+                <div class="box-ip">
+                  <input type="file" class="ip-file">
+                </div>
+                <div class="space16"></div>
+                <p>JPEG 100x100</p>
+              </div>
+            </div>
+            <div class="space40"></div>
+            <h4>Agent Poster</h4>
+            <div class="space24"></div>
+            <div class="box-agent-avt">
+              <div class="img-poster">
+                <img src="/static/img/all-images/others/profile2.png" alt="avatar" loading="lazy">
+              </div>
+              <div class="content uploadfile">
+                <p>Upload a new poster</p>
+                <div class="space16"></div>
+                <div class="box-ip">
+                  <input type="file" class="ip-file">
+                </div>
+                <div class="space16"></div>
+                <span>JPEG 100x100</span>
+              </div>
+            </div>
+          </div>
+          <div class="space48"></div>
+          <div class="personal-info-area">
+            <h2>Personal Information</h2>
+            <div class="space28"></div>
+            <div class="input-area">
+              <h5>Full Name*</h5>
+              <div class="space16"></div>
+              <input type="text" placeholder="Full Name">
+            </div>
+            <div class="space28"></div>
+            <div class="input-area">
+              <h5>Description</h5>
+              <div class="space16"></div>
+              <textarea>Choosing the right neighborhood is a crucial step in finding the perfect home for your family. It’s not just about the house itself but the environment that surrounds it. A great neighborhood offers safety, convenience, and access to essential amenities like schools, parks, and healthcare. It should reflect your family’s lifestyle, providing opportunities for growth, connection, and comfort. </textarea>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Your Company*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="Your Company*">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Position*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="Position*">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Office Number*</h5>
+                  <div class="space16"></div>
+                  <input type="number" placeholder="Office Number*">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Office Address</h5>
+                  <div class="space16"></div>
+                  <input type="number" placeholder="Office Address">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Job*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="Agent*">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Email Address*</h5>
+                  <div class="space16"></div>
+                  <input type="email" placeholder="housebox@gmail.com">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Phone Number*</h5>
+                  <div class="space16"></div>
+                  <input type="number" placeholder="Phone Number*">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Office Address</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="Office Address">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Facebook*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="##">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Instagram*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="##">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Twitter*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="##">
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="space28"></div>
+                <div class="input-area">
+                  <h5>Linkedin*</h5>
+                  <div class="space16"></div>
+                  <input type="text" placeholder="##">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="space32"></div>
+                <div class="btn-area1">
+                  <a href="index.html" class="theme-btn1">Save And Update <span class="arrow1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                      </svg></span><span class="arrow2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                      </svg></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space48"></div>
+          <div class="password-info-area">
+            <h2>Change Password</h2>
+            <div class="space26"></div>
+            <div class="box">
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="box-fieldset">
+                    <label>Old Password:<span>*</span></label>
+                    <div class="box-password">
+                      <input type="password" class="form-contact style-1 password-field" placeholder="Password">
+                      <span class="show-pass">
+                        <i class="fa-regular fa-eye"></i>
+                        <i class="fa-regular fa-eye-slash"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="box-fieldset">
+                    <label>New Password:<span>*</span></label>
+                    <div class="box-password">
+                      <input type="password" class="form-contact style-1 password-field2" placeholder="Password">
+                      <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
+                      <span class="show-pass2">
+                        <i class="fa-regular fa-eye"></i>
+                        <i class="fa-regular fa-eye-slash"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="box-fieldset">
+                    <label>Confirm Password:<span>*</span></label>
+                    <div class="box-password">
+                      <input type="password" class="form-contact style-1 password-field3" placeholder="Password">
+                      <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div><span class="show-pass3">
+                        <i class="fa-regular fa-eye"></i>
+                        <i class="fa-regular fa-eye-slash"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="space32"></div>
+            <div class="btn-area1">
+              <a href="index.html" class="theme-btn1">Update Password <span class="arrow1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                  </svg></span><span class="arrow2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                  </svg></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== DASHBOARD AREA ENDS =======-->
+
+  <!--===== CTA AREA STARTS =======-->
+  {% include "components/cta.html" %}
+  <!--===== CTA AREA ENDS =======-->
+
+
+{% endblock %}

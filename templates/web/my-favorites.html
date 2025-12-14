@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <!--===== HERO AREA STARTS =======-->
+  {% include "components/hero.html" with title="My Favourite" %}
+  <!--===== HERO AREA ENDS =======-->
+
+  <!--===== DASHBOARD AREA STARTS =======-->
+  <div class="dashboard-section-area sp1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="space30"></div>
+          <div class="dashboad-all-details-section">
+            <h3>New Listing</h3>
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="input-area">
+                  <form>
+                    <input type="text">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path>
+                      </svg></button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="input-area">
+                  <form>
+                    <input type="date">
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="input-area">
+                  <div class="nice-select" tabindex="0">
+                    <span class="current">Select</span>
+                    <ul class="list">
+                      <li data-value="1" class="option">Today</li>
+                      <li data-value="2" class="option selected">Yesterday</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="space28"></div>
+              <h4 class="found">60 Result Found</h4>
+              <div class="space20"></div>
+              <div class="table-container">
+                <!-- Header -->
+                <div class="table-header">
+                  <div>Listing</div>
+                  <div>Status</div>
+                  <div>Action</div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="table-row">
+                  <div class="listing">
+                    <img src="/static/img/all-images/others/dash-img1.png" alt="Apartment Complex">
+                    <div class="details">
+                      <a href="property-details-v1.html">Apartment Complex</a>
+                      <div class="space18"></div>
+                      <p>
+                        <span><img src="/static/img/icons/bed1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/bath1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/sqare1.svg" alt="housebox"> 1200 sq</span>
+                      </p>
+                      <div class="space16"></div>
+                      <a class="price">$820,000</a>
+                    </div>
+                  </div>
+                  <div class="status">
+                    <a href="property-details-v1.html" class="status-badge approved">April 10, 2024</a>
+                  </div>
+                  <div class="actions">
+                    <button class="edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.41421 15.89L16.5563 5.74785L15.1421 4.33363L5 14.4758V15.89H6.41421ZM7.24264 17.89H3V13.6473L14.435 2.21231C14.8256 1.82179 15.4587 1.82179 15.8492 2.21231L18.6777 5.04074C19.0682 5.43126 19.0682 6.06443 18.6777 6.45495L7.24264 17.89ZM3 19.89H21V21.89H3V19.89Z"></path>
+                      </svg> Edit</button>
+                    <button class="sold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.0943 5.68009L18.3199 16.9057C19.3736 15.5506 20 13.8491 20 12C20 7.58172 16.4183 4 12 4C10.1509 4 8.44939 4.62644 7.0943 5.68009ZM16.9057 18.3199L5.68009 7.0943C4.62644 8.44939 4 10.1509 4 12C4 16.4183 7.58172 20 12 20C13.8491 20 15.5506 19.3736 16.9057 18.3199ZM4.92893 4.92893C6.73748 3.12038 9.23885 2 12 2C17.5228 2 22 6.47715 22 12C22 14.7611 20.8796 17.2625 19.0711 19.0711C17.2625 20.8796 14.7611 22 12 22C6.47715 22 2 17.5228 2 12C2 9.23885 3.12038 6.73748 4.92893 4.92893Z"></path>
+                      </svg> Sold</button>
+                    <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"></path>
+                      </svg> Delete</button>
+                  </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="table-row">
+                  <div class="listing">
+                    <img src="/static/img/all-images/others/dash-img2.png" alt="Apartment Complex">
+                    <div class="details">
+                      <a href="property-details-v1.html">Luxury Green Villa</a>
+                      <div class="space18"></div>
+                      <p>
+                        <span><img src="/static/img/icons/bed1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/bath1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/sqare1.svg" alt="housebox"> 1200 sq</span>
+                      </p>
+                      <div class="space16"></div>
+                      <a class="price">$820,000</a>
+                    </div>
+                  </div>
+                  <div class="status">
+                    <a href="" class="status-badge pending">August 14, 2024</a>
+                  </div>
+                  <div class="actions">
+                    <button class="edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.41421 15.89L16.5563 5.74785L15.1421 4.33363L5 14.4758V15.89H6.41421ZM7.24264 17.89H3V13.6473L14.435 2.21231C14.8256 1.82179 15.4587 1.82179 15.8492 2.21231L18.6777 5.04074C19.0682 5.43126 19.0682 6.06443 18.6777 6.45495L7.24264 17.89ZM3 19.89H21V21.89H3V19.89Z"></path>
+                      </svg> Edit</button>
+                    <button class="sold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.0943 5.68009L18.3199 16.9057C19.3736 15.5506 20 13.8491 20 12C20 7.58172 16.4183 4 12 4C10.1509 4 8.44939 4.62644 7.0943 5.68009ZM16.9057 18.3199L5.68009 7.0943C4.62644 8.44939 4 10.1509 4 12C4 16.4183 7.58172 20 12 20C13.8491 20 15.5506 19.3736 16.9057 18.3199ZM4.92893 4.92893C6.73748 3.12038 9.23885 2 12 2C17.5228 2 22 6.47715 22 12C22 14.7611 20.8796 17.2625 19.0711 19.0711C17.2625 20.8796 14.7611 22 12 22C6.47715 22 2 17.5228 2 12C2 9.23885 3.12038 6.73748 4.92893 4.92893Z"></path>
+                      </svg> Sold</button>
+                    <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"></path>
+                      </svg> Delete</button>
+                  </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="table-row">
+                  <div class="listing">
+                    <img src="/static/img/all-images/others/dash-img3.png" alt="Apartment Complex">
+                    <div class="details">
+                      <a href="property-details-v1.html">Four Room Apartment</a>
+                      <div class="space18"></div>
+                      <p>
+                        <span><img src="/static/img/icons/bed1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/bath1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/sqare1.svg" alt="housebox"> 1200 sq</span>
+                      </p>
+                      <div class="space16"></div>
+                      <a class="price">$820,000</a>
+                    </div>
+                  </div>
+                  <div class="status">
+                    <a href="#" class="status-badge approved">April 10, 2024</a>
+                  </div>
+                  <div class="actions">
+                    <button class="edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.41421 15.89L16.5563 5.74785L15.1421 4.33363L5 14.4758V15.89H6.41421ZM7.24264 17.89H3V13.6473L14.435 2.21231C14.8256 1.82179 15.4587 1.82179 15.8492 2.21231L18.6777 5.04074C19.0682 5.43126 19.0682 6.06443 18.6777 6.45495L7.24264 17.89ZM3 19.89H21V21.89H3V19.89Z"></path>
+                      </svg> Edit</button>
+                    <button class="sold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.0943 5.68009L18.3199 16.9057C19.3736 15.5506 20 13.8491 20 12C20 7.58172 16.4183 4 12 4C10.1509 4 8.44939 4.62644 7.0943 5.68009ZM16.9057 18.3199L5.68009 7.0943C4.62644 8.44939 4 10.1509 4 12C4 16.4183 7.58172 20 12 20C13.8491 20 15.5506 19.3736 16.9057 18.3199ZM4.92893 4.92893C6.73748 3.12038 9.23885 2 12 2C17.5228 2 22 6.47715 22 12C22 14.7611 20.8796 17.2625 19.0711 19.0711C17.2625 20.8796 14.7611 22 12 22C6.47715 22 2 17.5228 2 12C2 9.23885 3.12038 6.73748 4.92893 4.92893Z"></path>
+                      </svg> Sold</button>
+                    <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"></path>
+                      </svg> Delete</button>
+                  </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="table-row">
+                  <div class="listing">
+                    <img src="/static/img/all-images/others/dash-img4.png" alt="Apartment Complex">
+                    <div class="details">
+                      <a href="property-details-v1.html">Suburb Apartment</a>
+                      <div class="space18"></div>
+                      <p>
+                        <span><img src="/static/img/icons/bed1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/bath1.svg" alt="housebox"> x2</span>
+                        <span><img src="/static/img/icons/sqare1.svg" alt="housebox"> 1200 sq</span>
+                      </p>
+                      <div class="space16"></div>
+                      <a class="price">$820,000</a>
+                    </div>
+                  </div>
+                  <div class="status">
+                    <a href="#" class="status-badge sold">July 10, 2024</a>
+                  </div>
+                  <div class="actions">
+                    <button class="edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.41421 15.89L16.5563 5.74785L15.1421 4.33363L5 14.4758V15.89H6.41421ZM7.24264 17.89H3V13.6473L14.435 2.21231C14.8256 1.82179 15.4587 1.82179 15.8492 2.21231L18.6777 5.04074C19.0682 5.43126 19.0682 6.06443 18.6777 6.45495L7.24264 17.89ZM3 19.89H21V21.89H3V19.89Z"></path>
+                      </svg> Edit</button>
+                    <button class="sold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.0943 5.68009L18.3199 16.9057C19.3736 15.5506 20 13.8491 20 12C20 7.58172 16.4183 4 12 4C10.1509 4 8.44939 4.62644 7.0943 5.68009ZM16.9057 18.3199L5.68009 7.0943C4.62644 8.44939 4 10.1509 4 12C4 16.4183 7.58172 20 12 20C13.8491 20 15.5506 19.3736 16.9057 18.3199ZM4.92893 4.92893C6.73748 3.12038 9.23885 2 12 2C17.5228 2 22 6.47715 22 12C22 14.7611 20.8796 17.2625 19.0711 19.0711C17.2625 20.8796 14.7611 22 12 22C6.47715 22 2 17.5228 2 12C2 9.23885 3.12038 6.73748 4.92893 4.92893Z"></path>
+                      </svg> Sold</button>
+                    <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"></path>
+                      </svg> Delete</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <div class="pagination-area" style="text-align: start;">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">....</a></li>
+                      <li class="page-item"><a class="page-link" href="#">12</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== DASHBOARD AREA ENDS =======-->
+
+  <!--===== CTA AREA STARTS =======-->
+  {% include "components/cta.html" %}
+  <!--===== CTA AREA ENDS =======-->
+
+
+{% endblock %}

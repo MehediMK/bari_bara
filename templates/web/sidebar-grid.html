@@ -1,0 +1,669 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--===== HERO AREA STARTS =======-->
+{% include "components/hero.html" with title="Find Sidebar Grid" %}
+<!--===== HERO AREA ENDS =======-->
+
+<!--===== PROPERTIES AREA STARTS =======-->
+<div class="property-inner-section-find sp1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="property-mapgrid-area">
+          <div class="heading1">
+            <h3>Properties (58)</h3>
+            <div class="tabs-btn">
+              <ul class="nav nav-pills d-none d-lg-block" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M22 12.999V20C22 20.5523 21.5523 21 21 21H13V12.999H22ZM11 12.999V21H3C2.44772 21 2 20.5523 2 20V12.999H11ZM11 3V10.999H2V4C2 3.44772 2.44772 3 3 3H11ZM21 3C21.5523 3 22 3.44772 22 4V10.999H13V3H21Z">
+                      </path>
+                    </svg>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M8 4H21V6H8V4ZM3 3.5H6V6.5H3V3.5ZM3 10.5H6V13.5H3V10.5ZM3 17.5H6V20.5H3V17.5ZM8 11H21V13H8V11ZM8 18H21V20H8V18Z">
+                      </path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="d-flex">
+                <div class="filter-group me-3">
+                  <select>
+                    <option>Show:(12)</option>
+                    <option>Show:(30)</option>
+                    <option>Show:(50)</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <select>
+                    <option>Sort by (Default)</option>
+                    <option>Oldest</option>
+                    <option>Newest</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space32 d-none d-lg-block"></div>
+          <div class="row">
+            <div class="col-lg-4">
+              {% include "components/sidebar_property.html" %}
+            </div>
+            <div class="col-lg-8">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                  tabindex="0">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime">
+                          <div class="swiper swiper-fade">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img2.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img1.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img3.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img4.png" alt="housebox">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            <li><a href="property-details-v1.html">Featured</a></li>
+                            <li><a href="property-details-v1.html">For Rent</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="property-details-v1.html">Apartment Complex</a>
+                          <div class="space18"></div>
+                          <p>Los Angeles City, CA, USA</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x20</a></li>
+                            <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x30</a></li>
+                            <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="#" class="nm-btn">$820,000</a>
+                            <a href="javascript:void(0)" class="heart"><img src="/static/img/icons/heart1.svg"
+                                alt="housebox" class="heart1"> <img src="/static/img/icons/heart2.svg" alt="housebox"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime">
+                          <div class="swiper swiper-fade">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img5.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img6.png" alt="housebox">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            <li><a href="property-details-v1.html">Featured</a></li>
+                            <li><a href="property-details-v1.html">For Sale</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="property-details-v1.html">Luxury Suite Villa</a>
+                          <div class="space18"></div>
+                          <p>Los Angeles City, CA, USA</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                            <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                            <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="#" class="nm-btn">$820,000</a>
+                            <a href="javascript:void(0)" class="heart"><img src="/static/img/icons/heart1.svg"
+                                alt="housebox" class="heart1"> <img src="/static/img/icons/heart2.svg" alt="housebox"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime">
+                          <div class="swiper swiper-fade">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img2.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img1.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img3.png" alt="housebox">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="/static/img/all-images/properties/property-img4.png" alt="housebox">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            <li><a href="property-details-v1.html">Featured</a></li>
+                            <li><a href="property-details-v1.html">For Rent</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="property-details-v1.html">Diamond Apartment</a>
+                          <div class="space18"></div>
+                          <p>Los Angeles City, CA, USA</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x23</a></li>
+                            <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x34</a></li>
+                            <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="#" class="nm-btn">$820,000</a>
+                            <a href="javascript:void(0)" class="heart"><img src="/static/img/icons/heart1.svg"
+                                alt="housebox" class="heart1"> <img src="/static/img/icons/heart2.svg" alt="housebox"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime">
+                          <img src="/static/img/all-images/properties/property-img4.png" alt="housebox">
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            <li><a href="property-details-v1.html">Featured</a></li>
+                            <li><a href="property-details-v1.html">For Sale</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="property-details-v1.html">Three Room Apartment</a>
+                          <div class="space18"></div>
+                          <p>Los Angeles City, CA, USA</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x20</a></li>
+                            <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x30</a></li>
+                            <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="#" class="nm-btn">$820,000</a>
+                            <a href="javascript:void(0)" class="heart"><img src="/static/img/icons/heart1.svg"
+                                alt="housebox" class="heart1"> <img src="/static/img/icons/heart2.svg" alt="housebox"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime">
+                          <img src="/static/img/all-images/properties/property-img5.png" alt="housebox">
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            <li><a href="property-details-v1.html">Featured</a></li>
+                            <li><a href="property-details-v1.html">For Rent</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="property-details-v1.html">Suburb Home for Rent </a>
+                          <div class="space18"></div>
+                          <p>Los Angeles City, CA, USA</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                            <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                            <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="property-details-v1.html" class="nm-btn">$820,000</a>
+                            <a href="javascript:void(0)" class="heart"><img src="/static/img/icons/heart1.svg"
+                                alt="housebox" class="heart1"> <img src="/static/img/icons/heart2.svg" alt="housebox"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime">
+                          <img src="/static/img/all-images/properties/property-img6.png" alt="housebox">
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            <li><a href="property-details-v1.html">Featured</a></li>
+                            <li><a href="property-details-v1.html">For Sale</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="property-details-v1.html">Gorgeous Home for Sale</a>
+                          <div class="space18"></div>
+                          <p>Los Angeles City, CA, USA</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x23</a></li>
+                            <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x34</a></li>
+                            <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="#" class="nm-btn">$820,000</a>
+                            <a href="javascript:void(0)" class="heart"><img src="/static/img/icons/heart1.svg"
+                                alt="housebox" class="heart1"> <img src="/static/img/icons/heart2.svg" alt="housebox"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="pagination-area">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination">
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                                  </path>
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">....</a></li>
+                            <li class="page-item"><a class="page-link" href="#">12</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                                  </path>
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                  tabindex="0">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime">
+                              <div class="swiper swiper-fade">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <img src="/static/img/all-images/properties/property-img12.png" alt="housebox">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="/static/img/all-images/properties/property-img11.png" alt="housebox">
+                                  </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                <li><a href="property-details-v1.html">Featured</a></li>
+                                <li><a href="property-details-v1.html">For Rent</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="property-details-v1.html">Luxury Suite Villa 22</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> Los Angeles City, CA, USA</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                                <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                                <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="img">
+                                    <img src="/static/img/all-images/properties/property-img7.png" alt="housebox">
+                                  </div>
+                                  <div class="text">
+                                    <a href="#">Alex Roberts</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="nm-btn">$820,000</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime">
+                              <img src="/static/img/all-images/properties/property-img11.png" alt="housebox">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                <li><a href="property-details-v1.html">Featured</a></li>
+                                <li><a href="property-details-v1.html">For Sale</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="property-details-v1.html">Apartment Diamond</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> Los Angeles City, CA, USA</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                                <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                                <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="img">
+                                    <img src="/static/img/all-images/properties/property-img8.png" alt="housebox">
+                                  </div>
+                                  <div class="text">
+                                    <a href="#">Alex Roberts</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="nm-btn">$820,000</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime">
+                              <img src="/static/img/all-images/properties/property-img12.png" alt="housebox">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                <li><a href="property-details-v1.html">Featured</a></li>
+                                <li><a href="property-details-v1.html">For Rent</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="property-details-v1.html">Apartment Angles</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> Los Angeles City, CA, USA</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                                <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                                <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="img">
+                                    <img src="/static/img/all-images/properties/property-img9.png" alt="housebox">
+                                  </div>
+                                  <div class="text">
+                                    <a href="#">Alesa Healy</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="nm-btn">$820,000</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime">
+                              <img src="/static/img/all-images/properties/property-img6.png" alt="housebox">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                <li><a href="property-details-v1.html">Featured</a></li>
+                                <li><a href="property-details-v1.html">For Rent</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="property-details-v1.html">Luxury Suite Villa</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> Los Angeles City, CA, USA</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                                <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                                <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="img">
+                                    <img src="/static/img/all-images/properties/property-img7.png" alt="housebox">
+                                  </div>
+                                  <div class="text">
+                                    <a href="#">Kurt Bates</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="nm-btn">$820,000</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime">
+                              <img src="/static/img/all-images/properties/property-img5.png" alt="housebox">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                <li><a href="property-details-v1.html">Featured</a></li>
+                                <li><a href="property-details-v1.html">For Rent</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="property-details-v1.html">Apartment Diamond</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> Los Angeles City, CA, USA</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                                <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                                <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="img">
+                                    <img src="/static/img/all-images/properties/property-img7.png" alt="housebox">
+                                  </div>
+                                  <div class="text">
+                                    <a href="#">Kurt Bates</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="nm-btn">$820,000</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime">
+                              <img src="/static/img/all-images/properties/property-img5.png" alt="housebox">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                <li><a href="property-details-v1.html">Featured</a></li>
+                                <li><a href="property-details-v1.html">For Rent</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="property-details-v1.html">Apartment Diamond</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> Los Angeles City, CA, USA</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="/static/img/icons/bed1.svg" alt="housebox">x12</a></li>
+                                <li><a href="#"><img src="/static/img/icons/bath1.svg" alt="housebox">x16</a></li>
+                                <li><a href="#"><img src="/static/img/icons/sqare1.svg" alt="housebox">1200 sq</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="img">
+                                    <img src="/static/img/all-images/properties/property-img7.png" alt="housebox">
+                                  </div>
+                                  <div class="text">
+                                    <a href="#">Kurt Bates</a>
+                                  </div>
+                                </div>
+                                <a href="#" class="nm-btn">$820,000</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="pagination-area">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination">
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                                  </path>
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">....</a></li>
+                            <li class="page-item"><a class="page-link" href="#">12</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                                  </path>
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== PROPERTIES AREA ENDS =======-->
+
+<!--===== CTA AREA STARTS =======-->
+{% include "components/cta.html" %}
+<!--===== CTA AREA ENDS =======-->
+
+
+{% endblock %}

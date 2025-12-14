@@ -1,0 +1,142 @@
+{% load static %}
+{% load meta %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% block meta_tags %}
+  <!-- SEO Meta Tags -->
+  <title>{% block title %}{{ seo_title|default:"HouseBox - Real Estate Template" }}{% endblock %}</title>
+  <meta name="description" content="{{ seo_description|default:'Turning Real Estate Dreams Into Reality' }}">
+  <meta name="keywords" content="{{ seo_keywords|default:'real estate, house, apartment, rent, buy' }}">
+  <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:title" content="{{ seo_title|default:'HouseBox - Real Estate Template' }}">
+  <meta property="og:description" content="{{ seo_description|default:'Turning Real Estate Dreams Into Reality' }}">
+  <meta property="og:image" content="{{ og_image|default:'/static/img/logo/logo5.png' }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+  <meta property="twitter:title" content="{{ seo_title|default:'HouseBox - Real Estate Template' }}">
+  <meta property="twitter:description"
+    content="{{ seo_description|default:'Turning Real Estate Dreams Into Reality' }}">
+  <meta property="twitter:image" content="{{ og_image|default:'/static/img/logo/logo5.png' }}">
+
+  <!-- Django Meta (Optional Fallback) -->
+  {% if meta %}
+  {% include "meta/meta.html" %}
+  {% endif %}
+  {% endblock %}
+
+  <!-- CSS Plugins -->
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/mobile.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/owlcarousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/sidebar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/slick-slider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/nice-select.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/swiper-slider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  {% block extra_css %}{% endblock %}
+
+  <!-- JS SCRIPT LINK -->
+  <script src="{% static 'js/plugins/jquery-3-7-1.min.js' %}"></script>
+</head>
+
+<body class="homepage4-body">
+
+  <!--===== PRELOADER STARTS =======-->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon"><img src="{% static 'img/logo/preloader.png' %}" alt="housebox"></div>
+    </div>
+  </div>
+  <!--===== PRELOADER ENDS =======-->
+
+  <!--===== PROGRESS STARTS=======-->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+  </div>
+  <!--===== PROGRESS ENDS=======-->
+
+  <!--===== SEARCHBAR STARTS=======-->
+  <div class="header-search-form-wrapper">
+    <div class="tx-search-close tx-close"><i class="fa-solid fa-xmark"></i></div>
+    <div class="header-search-container">
+      <form role="search" class="search-form">
+        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+        <button type="submit" class="search-submit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 20 20" fill="none">
+            <path
+              d="M13.7955 13.8111L19 19M16 8.5C16 12.6421 12.6421 16 8.5 16C4.35786 16 1 12.6421 1 8.5C1 4.35786 4.35786 1 8.5 1C12.6421 1 16 4.35786 16 8.5Z"
+              stroke="#030E0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg></button>
+      </form>
+    </div>
+  </div>
+  <div class="body-overlay"></div>
+  <!--===== SEARCHBAR ENDS=======-->
+
+  <!--===== HEADER START =======-->
+  {% block header %}
+  {% include "components/header.html" %}
+  {% endblock %}
+  <!--===== HEADER END =======-->
+
+  <!--===== MOBILE HEADER STARTS =======-->
+  {% block mobile_header %}
+  {% include "components/mobile_header.html" %}
+  {% endblock %}
+  <!--===== MOBILE HEADER ENDS =======-->
+
+  {% block content %}{% endblock %}
+
+  <!--===== FOOTER AREA STARTS =======-->
+  {% block footer %}
+  {% include "components/footer.html" %}
+  {% endblock %}
+  <!--===== FOOTER AREA ENDS =======-->
+
+  <!--===== JS SCRIPT LINK =======-->
+  <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/fontawesome.js' %}"></script>
+  <script src="{% static 'js/plugins/aos.js' %}"></script>
+  <script src="{% static 'js/plugins/counter.js' %}"></script>
+  <script src="{% static 'js/plugins/chart.js' %}"></script>
+  <script src="{% static 'js/plugins/chart-init.js' %}"></script>
+  <script src="{% static 'js/plugins/gsap.min.js' %}"></script>
+  <script src="{% static 'js/plugins/ScrollTrigger.min.js' %}"></script>
+  <script src="{% static 'js/plugins/Splitetext.js' %}"></script>
+  <script src="{% static 'js/plugins/sidebar.js' %}"></script>
+  <script src="{% static 'js/plugins/swiper-slider.js' %}"></script>
+  <script src="{% static 'js/plugins/magnific-popup.js' %}"></script>
+  <script src="{% static 'js/plugins/mobilemenu.js' %}"></script>
+  <script src="{% static 'js/plugins/owlcarousel.min.js' %}"></script>
+  <script src="{% static 'js/plugins/nice-select.js' %}"></script>
+  <script src="{% static 'js/plugins/waypoints.js' %}"></script>
+  <script src="{% static 'js/plugins/slick-slider.js' %}"></script>
+  <script src="{% static 'js/plugins/circle-progress.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>

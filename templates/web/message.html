@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <!--===== HERO AREA STARTS =======-->
+  {% include "components/hero.html" with title="ALL MESSAGE" %}
+  <!--===== HERO AREA ENDS =======-->
+
+  <!--===== DASHBOARD AREA STARTS =======-->
+  <div class="dashboard-section-area sp1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="heading1">
+            <h2>All Message</h2>
+          </div>
+        </div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <div class="reviews">
+            <div class="filter-group me-3">
+              <select>
+                <option>Show:(12)</option>
+                <option>Show:(30)</option>
+                <option>Show:(50)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <select>
+                <option>Sort by (Default)</option>
+                <option>Oldest</option>
+                <option>Newest</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="space30"></div>
+          <div class="dashboard-info-sider-deatils">
+            <div class="dashboard-info-sider">
+              <div class="message-boxarea">
+                <div class="img1">
+                  <img src="/static/img/all-images/others/dash-img5.png" alt="housebox">
+                </div>
+                <div class="conatent-area">
+                  <div class="content">
+                    <a href="#">Henry Nicolas</a>
+                    <p>3 Days Ago</p>
+                  </div>
+                  <div class="space14"></div>
+                  <p>We're excited to help you find the perfect neighborhood and home for your family Let us know how.</p>
+                </div>
+              </div>
+
+              <div class="message-boxarea">
+                <div class="space32"></div>
+                <div class="img1">
+                  <img src="/static/img/all-images/others/dash-img6.png" alt="housebox">
+                </div>
+                <div class="conatent-area">
+                  <div class="content">
+                    <a href="#">Kane Williamson</a>
+                    <p>3 Days Ago</p>
+                  </div>
+                  <div class="space14"></div>
+                  <p>Thank you for reaching out! We’re here to guiding you every step of the way in finding the idea home.</p>
+                </div>
+              </div>
+
+              <div class="message-boxarea">
+                <div class="space32"></div>
+                <div class="img1">
+                  <img src="/static/img/all-images/others/dash-img7.png" alt="housebox">
+                </div>
+                <div class="conatent-area">
+                  <div class="content">
+                    <a href="#">Marting Guptil</a>
+                    <p>3 Days Ago</p>
+                  </div>
+                  <div class="space14"></div>
+                  <p>Finding the perfect place to call home is a journey worth taking, Explore our listings, resources.</p>
+                </div>
+              </div>
+              <div class="message-boxarea">
+                <div class="space32"></div>
+                <div class="img1">
+                  <img src="/static/img/all-images/others/dash-img8.png" alt="housebox">
+                </div>
+                <div class="conatent-area">
+                  <div class="content">
+                    <a href="#">Gleen Philips</a>
+                    <p>3 Days Ago</p>
+                  </div>
+                  <div class="space14"></div>
+                  <p>We hope your home search is the going smoothly! If you have any question need more information.</p>
+                </div>
+              </div>
+              <div class="message-boxarea" style="border-bottom: none; padding: 0;">
+                <div class="space32"></div>
+                <div class="img1">
+                  <img src="/static/img/all-images/others/dash-img9.png" alt="housebox">
+                </div>
+                <div class="conatent-area">
+                  <div class="content">
+                    <a href="#">Trent Boult</a>
+                    <p>3 Days Ago</p>
+                  </div>
+                  <div class="space14"></div>
+                  <p>We hope your home search is the going smoothly! If you have any question need more information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="pagination-area">
+            <div class="space30"></div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination" style="justify-content: start;">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">....</a></li>
+                <li class="page-item"><a class="page-link" href="#">12</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== DASHBOARD AREA ENDS =======-->
+
+  <!--===== CTA AREA STARTS =======-->
+  {% include "components/cta.html" %}
+  <!--===== CTA AREA ENDS =======-->
+
+
+{% endblock %}

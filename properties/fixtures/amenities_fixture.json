@@ -1,0 +1,98 @@
+[
+  {
+    "model": "properties.amenity",
+    "pk": 1,
+    "fields": {
+      "name": "Free WiFi",
+      "icon": "bi-wifi"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 2,
+    "fields": {
+      "name": "Air Conditioning",
+      "icon": "bi-thermometer-snow"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 3,
+    "fields": {
+      "name": "TV / Cable",
+      "icon": "bi-tv"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 4,
+    "fields": {
+      "name": "Kitchen",
+      "icon": "bi-cup-hot"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 5,
+    "fields": {
+      "name": "Parking",
+      "icon": "bi-car-front"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 6,
+    "fields": {
+      "name": "Swimming Pool",
+      "icon": "bi-water"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 7,
+    "fields": {
+      "name": "Wheelchair Accessible",
+      "icon": "bi-person-wheelchair"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 8,
+    "fields": {
+      "name": "Gym",
+      "icon": "bi-people"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 9,
+    "fields": {
+      "name": "Security",
+      "icon": "bi-shield-check"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 10,
+    "fields": {
+      "name": "Garden",
+      "icon": "bi-tree"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 11,
+    "fields": {
+      "name": "Private Entrance",
+      "icon": "bi-door-closed"
+    }
+  },
+  {
+    "model": "properties.amenity",
+    "pk": 12,
+    "fields": {
+      "name": "Elevator",
+      "icon": "bi-elevator"
+    }
+  }
+]
