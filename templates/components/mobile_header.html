@@ -65,32 +65,9 @@
     </div>
     <div class="mobile-nav mobile-nav1">
         <ul class="mobile-nav-list nav-list1">
-            <li><a href="#">Home </a>
-                <ul class="sub-menu">
-                    <li><a href="{% url 'index' %}">Home One</a></li>
-                    <li><a href="index2.html">Home Two</a></li>
-                    <li><a href="index3.html">Home Three</a></li>
-                    <li><a href="index4.html">Home Four</a></li>
-                </ul>
-            </li>
-            <li><a href="features.html">Listing</a>
-                <ul class="sub-menu">
-                    <li><a href="property-halfmap-grid.html">Property Half Grid</a></li>
-                    <li><a href="property-halfmap-list.html">Property Half Map List</a></li>
-                    <li><a href="topmap-grid.html">Property Top Map Grid</a></li>
-                    <li><a href="{% url 'page' 'loan-caculator' %}">Property Top Map List</a></li>
-                    <li><a href="{% url 'page' 'sidebar-grid' %}">Find Sidebar Grid</a></li>
-                    <li><a href="sidebar-list.html">Find Sidebar List</a></li>
-                </ul>
-            </li>
-            <li><a href="features.html">Properties</a>
-                <ul class="sub-menu">
-                    <li><a href="property-details-v1.html">Property Details 01</a></li>
-                    <li><a href="property-details-v2.html">Property Details 02</a></li>
-                    <li><a href="{% url 'page' 'property-details-v3' %}">Property Details 03</a></li>
-                    <li><a href="property-details-v4.html">Property Details 04</a></li>
-                </ul>
-            </li>
+            <li><a href="{% url 'index' %}">Home </a></li>            
+            <li><a  href="{% url 'page' 'loan-caculator' %}">Listing</a></li>
+            <li><a href="{% url 'page' 'property-details-v3' %}">Property Details</a></li>
             <li><a href="#">Blogs</a>
                 <ul class="sub-menu">
                     <li><a href="{% url 'page' 'blog' %}">Blog Default</a></li>
