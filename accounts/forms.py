@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
-from .models import User
+from .models import User, USER_ROLES
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -16,13 +16,20 @@ class SignUpForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['phone', 'email', 'gender', 'date_of_birth']
+        fields = ['phone', 'email', 'gender', 'date_of_birth', 'role']
         widgets = {
             'phone': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'gender': forms.Select(attrs={'class': 'form-select'}),
+            'role': forms.Select(attrs={'class': 'form-select'}),
             'date_of_birth': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Filter out 'admin' from role choices
+        roles = [r for r in USER_ROLES if r[0] != 'admin']
+        self.fields['role'].choices = roles
 
     def clean(self):
         cleaned_data = super().clean()

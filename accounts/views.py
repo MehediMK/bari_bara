@@ -12,7 +12,7 @@ def signup_view(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Account created successfully!")
-            return redirect('properties')
+            return redirect('user_profile')
     else:
         form = SignUpForm()
     return render(request, 'accounts/signup.html', {'form': form})
@@ -35,3 +35,7 @@ def signout_view(request):
     messages.success(request, "You have been logged out.")
     return redirect('signin')
 
+
+@login_required
+def user_profile_view(request):
+    return render(request, 'accounts/profile.html')
