@@ -10,10 +10,12 @@
                         </div>
                         <div class="main-menu">
                             <ul>
-                                <li><a href="{% url 'index' %}" class="plus">Home <i class="fa-solid fa-angle-down"></i></a></li>
-                                 <li><a href="{% url 'page' 'sidebar-grid' %}" class="plus">Properties</a></li>                                 
-                                <li><a href="{% url 'page' 'property-details-v3' %}" class="plus">Property Details</a></li>
-                                
+                                <li><a href="{% url 'index' %}" class="plus">Home <i
+                                            class="fa-solid fa-angle-down"></i></a></li>
+                                <li><a href="{% url 'page' 'sidebar-grid' %}" class="plus">Properties</a></li>
+                                <li><a href="{% url 'page' 'property-details-v3' %}" class="plus">Property Details</a>
+                                </li>
+
                                 <li><a href="#" class="plus">Pages <i class="fa-solid fa-angle-down"></i></a>
                                     <ul class="dropdown-padding">
                                         <li><a href="{% url 'page' 'about-us' %}">About Us</a></li>
@@ -25,6 +27,7 @@
                                         <li><a href="{% url 'page' 'loan-caculator' %}">Loan Calculator</a></li>
                                     </ul>
                                 </li>
+                                {% if user.is_authenticated %}
                                 <li><a href="#" class="plus">Dashboard <i class="fa-solid fa-angle-down"></i></a>
                                     <ul class="dropdown-padding">
                                         <li><a href="{% url 'page' 'dashboard' %}">Dashboard</a></li>
@@ -32,10 +35,11 @@
                                         <li><a href="{% url 'page' 'message' %}">Message</a></li>
                                         <li><a href="{% url 'page' 'my-favorites' %}">My Favourites</a></li>
                                         <li><a href="{% url 'page' 'reviews' %}">Reviews</a></li>
-                                        <li><a href="{% url 'page' 'my-profile' %}">My Propfile</a></li>
+                                        <li><a href="{% url 'user_profile' %}">My Profile</a></li>
                                         <li><a href="{% url 'page' 'add-property' %}">Add Property</a></li>
                                     </ul>
                                 </li>
+                                {% endif %}
                                 <li><a href="#" class="plus">Blogs <i class="fa-solid fa-angle-down"></i></a>
                                     <ul class="dropdown-padding">
                                         <li><a href="{% url 'page' 'blog' %}">Blog Default</a></li>
@@ -53,6 +57,20 @@
                                             d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z">
                                         </path>
                                     </svg></a>
+                            </div>
+                            <div class="user-account-links"
+                                style="margin-right: 20px; display: inline-flex; align-items: center;">
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'signout' %}"
+                                    style="margin-right: 15px; font-weight: 500; font-size: 16px; color: #000;">Sign
+                                    Out</a>
+                                {% else %}
+                                <a href="{% url 'signin' %}"
+                                    style="margin-right: 15px; font-weight: 500; font-size: 16px; color: #000;">Sign
+                                    In</a>
+                                <a href="{% url 'signup' %}"
+                                    style="font-weight: 500; font-size: 16px; color: #000;">Register</a>
+                                {% endif %}
                             </div>
                             <a href="{% url 'page' 'sidebar-grid' %}" class="theme-btn5">View Listing <span
                                     class="arrow1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
