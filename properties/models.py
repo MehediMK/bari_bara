@@ -171,6 +171,22 @@ class Properties(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.district}/{self.area})"
+    
+    @property
+    def address(self):
+        """
+        Full formatted address for display
+        """
+        parts = [
+            self.short_address,
+            self.sub_area,
+            self.area,
+            self.district,
+            self.division,
+            self.country.name if self.country else None,
+            self.zip_code,
+        ]
+        return ", ".join([p for p in parts if p])
 
 
 class PropertyImage(models.Model):
