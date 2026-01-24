@@ -3,7 +3,7 @@ from django.db import models
 from unfold.admin import ModelAdmin
 from unfold.contrib.forms.widgets import WysiwygWidget
 from .models import Amenity, Properties, PropertyImage
-
+from tinymce.widgets import TinyMCE
 
 @admin.register(Amenity)
 class AmenityAdmin(ModelAdmin):
@@ -33,9 +33,7 @@ class PropertiesAdmin(ModelAdmin):
     filter_horizontal = ('included_in_price_amenities', 'all_amenities')
     CheckboxSelectMultiple = True
     formfield_overrides = {
-        models.TextField: {
-            "widget": WysiwygWidget,
-        }
+        models.TextField: {"widget": TinyMCE(attrs={"cols": 80, "rows": 20})},
     }
 
     fieldsets = (

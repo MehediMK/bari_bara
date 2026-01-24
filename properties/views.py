@@ -38,6 +38,12 @@ def properties(request):
     context['total_count'] = queryset.count()
     context['location_display'] = request.GET.get('location', '').strip() or "All Locations"
     context['sort_by'] = request.GET.get('sort', 'newest')
+    
+    # Latest/Recent properties for sidebar
+    context['latest_properties'] = Properties.objects.filter(
+        status='approved', is_active=True
+    ).order_by('-created_at')[:4]
+
     # seo tags
     context['seo_title'] = seo_title
     context['seo_description'] = seo_description

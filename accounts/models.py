@@ -44,6 +44,7 @@ class User(AbstractUser):
     """
     Extends Django's User.
     """
+    username = None  # ✅ remove username field
     phone = models.CharField(_('Phone number'), max_length=20, unique=True)
     email = models.EmailField(_('Email address'), unique=True, blank=True, null=True)
 

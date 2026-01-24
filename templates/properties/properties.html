@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--===== HERO AREA STARTS =======-->
+{% include "components/hero.html" with title="Find Sidebar Grid" %}
+<!--===== HERO AREA ENDS =======-->
+
+<!--===== PROPERTIES AREA STARTS =======-->
+<div class="property-inner-section-find sp1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="property-mapgrid-area">
+          <div class="heading1">
+            <h3>Properties ({{ total_count }})</h3>
+            <div class="tabs-btn">
+              <ul class="nav nav-pills d-none d-lg-block" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M22 12.999V20C22 20.5523 21.5523 21 21 21H13V12.999H22ZM11 12.999V21H3C2.44772 21 2 20.5523 2 20V12.999H11ZM11 3V10.999H2V4C2 3.44772 2.44772 3 3 3H11ZM21 3C21.5523 3 22 3.44772 22 4V10.999H13V3H21Z">
+                      </path>
+                    </svg>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M8 4H21V6H8V4ZM3 3.5H6V6.5H3V3.5ZM3 10.5H6V13.5H3V10.5ZM3 17.5H6V20.5H3V17.5ZM8 11H21V13H8V11ZM8 18H21V20H8V18Z">
+                      </path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="d-flex">
+                <div class="filter-group me-3">
+                  <select>
+                    <option>Show:(12)</option>
+                    <option>Show:(30)</option>
+                    <option>Show:(50)</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <select>
+                    <option>Sort by (Default)</option>
+                    <option>Oldest</option>
+                    <option>Newest</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space32 d-none d-lg-block"></div>
+          <div class="row">
+            <div class="col-lg-4">
+              {% include "components/sidebar_property.html" %}
+            </div>
+            <div class="col-lg-8">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                  tabindex="0">
+                  <div class="row">
+                    {% if properties %}
+                    {% for property in properties %}
+                    <div class="col-lg-6 col-md-6">
+                      <div class="property-boxarea">
+                        <div class="img1 image-anime" style="height: 280px;">
+                          {% if property.images.all %}
+                          <div class="swiper swiper-fade">
+                            <div class="swiper-wrapper">
+                              {% for img in property.images.all %}
+                              <div class="swiper-slide">
+                                <img src="{{ img.image.url }}" alt="{{ property.title }}">
+                              </div>
+                              {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>
+                          {% else %}
+                          <img src="{% static '/img/all-images/properties/property-img38.png' %}" alt="{{ property.title }}">
+                          {% endif %}
+                        </div>
+                        <div class="category-list">
+                          <ul>
+                            {% if property.featured %}
+                            <li><a href="{% url 'property_details' property.slug %}">Featured</a></li>
+                            {% endif %}
+                            <li><a href="{% url 'property_details' property.slug %}">For {{ property.category|title }}</a></li>
+                          </ul>
+                        </div>
+                        <div class="content-area">
+                          <a href="{% url 'property_details' property.slug %}">{{ property.title|truncatechars:30 }}</a>
+                          <div class="space18"></div>
+                          <p>{{ property.short_address|default:property.area }}</p>
+                          <div class="space24"></div>
+                          <ul>
+                            <li><a href="#"><img src="{% static 'img/icons/bed1.svg' %}" alt="bed">x {{ property.bedroom }}</a></li>
+                            <li><a href="#"><img src="{% static 'img/icons/bath1.svg' %}" alt="bath">x {{ property.bathroom }}</a></li>
+                            <li><a href="#"><img src="{% static 'img/icons/sqare1.svg' %}" alt="size">{{ property.size }} {{ property.size_unit }}</a></li>
+                          </ul>
+                          <div class="btn-area">
+                            <a href="{% url 'property_details' property.slug %}" class="nm-btn">{{ property.currency }}
+                              {{ property.price }}</a>
+                            <a href="javascript:void(0)" class="heart"><img src="{% static 'img/icons/heart1.svg' %}"
+                                alt="heart" class="heart1"> <img src="{% static 'img/icons/heart2.svg' %}" alt="heart"
+                                class="heart2"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="col-12 text-center">
+                      <p>No properties found matching your criteria.</p>
+                    </div>
+                    {% endif %}
+
+                    <div class="col-lg-12">
+                      <div class="pagination-area">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination">
+                            {% if properties.has_previous %}
+                            <li class="page-item">
+                              <a class="page-link"
+                                href="?page={{ properties.previous_page_number }}&sort={{ sort_by }}&location={{ location_display }}"
+                                aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                                  </path>
+                                </svg>
+                              </a>
+                            </li>
+                            {% endif %}
+
+                            {% for num in properties.paginator.page_range %}
+                            {% if properties.number == num %}
+                            <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
+                            {% elif num > properties.number|add:'-3' and num < properties.number|add:'3' %} <li
+                              class="page-item"><a class="page-link"
+                                href="?page={{ num }}&sort={{ sort_by }}&location={{ location_display }}">{{ num }}</a>
+                              </li>
+                              {% endif %}
+                              {% endfor %}
+
+                              {% if properties.has_next %}
+                              <li class="page-item">
+                                <a class="page-link"
+                                  href="?page={{ properties.next_page_number }}&sort={{ sort_by }}&location={{ location_display }}"
+                                  aria-label="Next">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                      d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                                    </path>
+                                  </svg>
+                                </a>
+                              </li>
+                              {% endif %}
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                  tabindex="0">
+                  <div class="row">
+                    {% if properties %}
+                    {% for property in properties %}
+                    <div class="col-lg-12">
+                      <div class="property-boxarea2">
+                        <div class="row align-items-center">
+                          <div class="col-lg-6 col-md-6">
+                            <div class="img1 image-anime" style="height: 280px;">
+                              {% if property.images.all %}
+                              <div class="swiper swiper-fade">
+                                <div class="swiper-wrapper">
+                                  {% for img in property.images.all|slice:":3" %}
+                                  <div class="swiper-slide">
+                                    <img src="{{ img.image.url }}" alt="{{ property.title }}">
+                                  </div>
+                                  {% endfor %}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                              </div>
+                              {% else %}
+                              <img src="{% static '/img/all-images/properties/property-img38.png' %}" alt="{{ property.title }}">
+                              {% endif %}
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            <div class="category-list">
+                              <ul>
+                                {% if property.featured %}
+                                <li><a href="{% url 'property_details' property.slug %}">Featured</a></li>
+                                {% endif %}
+                                <li><a href="{% url 'property_details' property.slug %}">For {{ property.category|title }}</a></li>
+                              </ul>
+                            </div>
+                            <div class="content-area">
+                              <a href="{% url 'property_details' property.slug %}">{{ property.title }}</a>
+                              <div class="space18"></div>
+                              <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z">
+                                  </path>
+                                </svg> {{ property.short_address|default:property.area }}</p>
+                              <div class="space24"></div>
+                              <ul>
+                                <li><a href="#"><img src="{% static 'img/icons/bed1.svg' %}" alt="bed">x {{ property.bedroom }}</a></li>
+                                <li><a href="#"><img src="{% static 'img/icons/bath1.svg' %}" alt="bath">x {{ property.bathroom }}</a></li>
+                                <li><a href="#"><img src="{% static 'img/icons/sqare1.svg' %}" alt="size"> {{ property.size }} {{ property.size_unit }}</a></li>
+                              </ul>
+                              <div class="btn-area">
+                                <div class="name-area">
+                                  <div class="text">
+                                    <a href="#">{{ property.user.get_full_name|default:property.user.username }}</a>
+                                  </div>
+                                </div>
+                                <a href="{% url 'property_details' property.slug %}" class="nm-btn">{{ property.currency }} {{ property.price }}</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="col-12 text-center">
+                      <p>No properties found matching your criteria.</p>
+                    </div>
+                    {% endif %}
+
+                    <div class="col-lg-12">
+                      <div class="pagination-area">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination">
+                            {% if properties.has_previous %}
+                            <li class="page-item">
+                              <a class="page-link"
+                                href="?page={{ properties.previous_page_number }}&sort={{ sort_by }}&location={{ location_display }}"
+                                aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path
+                                    d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                                  </path>
+                                </svg>
+                              </a>
+                            </li>
+                            {% endif %}
+
+                            {% for num in properties.paginator.page_range %}
+                            {% if properties.number == num %}
+                            <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
+                            {% elif num > properties.number|add:'-3' and num < properties.number|add:'3' %} <li
+                              class="page-item"><a class="page-link"
+                                href="?page={{ num }}&sort={{ sort_by }}&location={{ location_display }}">{{ num }}</a>
+                              </li>
+                              {% endif %}
+                              {% endfor %}
+
+                              {% if properties.has_next %}
+                              <li class="page-item">
+                                <a class="page-link"
+                                  href="?page={{ properties.next_page_number }}&sort={{ sort_by }}&location={{ location_display }}"
+                                  aria-label="Next">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                      d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                                    </path>
+                                  </svg>
+                                </a>
+                              </li>
+                              {% endif %}
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--===== PROPERTIES AREA ENDS =======-->
+
+<!--===== CTA AREA STARTS =======-->
+{% include "components/cta.html" %}
+<!--===== CTA AREA ENDS =======-->
+
+
+{% endblock %}
